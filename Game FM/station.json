@@ -1,0 +1,126 @@
+{
+  "tag": "Game FM",
+  "info": {
+    "title": "Game FM",
+    "genre": "Rap, R n' B",
+    "logo": "logo.png",
+    "dj": "DJ: Stretch Armstrong e Lord Sear"
+  },
+  "fileGroups": [
+    {
+      "tag": "track",
+      "files": [
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        },
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        }        
+      ]
+    },
+    {
+      "tag": "general",
+      "files": [
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        },
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        },
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        }
+      ]
+    },
+    {
+      "tag": "mixin",
+      "files": [
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        },
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        },
+        {
+          "path": "Game FM.m4a",
+          "duration": 944
+        }
+      ]
+    }
+  ],
+  "playlist": {
+    "firstFragment": {
+      "fragmentTag": "general"
+    },
+    "fragments": [
+      {
+        "tag": "general",
+        "src": {
+          "type": "group",
+          "groupTag": "general"
+        },
+        "nextFragment": [
+          {
+            "fragmentTag": "track"
+          }
+        ]
+      },
+      {
+        "tag": "track",
+        "src": {
+          "type": "group",
+          "groupTag": "track"
+        },
+        "nextFragment": [
+          {
+            "fragmentTag": "general",
+            "probability": 0.333
+          },
+          {
+            "fragmentTag": "track"
+          }
+        ],
+        "mixins": {
+          "pos": [
+            {
+              "tag": "begin",
+              "relativeOffset": 0.03
+            },
+            {
+              "tag": "end",
+              "relativeOffset": 0.97
+            }
+          ],
+          "mix": [
+            {
+              "tag": "mixins",
+              "src": {
+                "type": "group",
+                "groupTag": "mixin"
+              },
+              "condition": {
+                "type": "random",
+                "probability": 0.9
+              },
+              "posVariant": [
+                {
+                  "posTag": "end"
+                },
+                {
+                  "posTag": "begin"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

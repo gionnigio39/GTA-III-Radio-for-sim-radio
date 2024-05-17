@@ -1,0 +1,126 @@
+{
+  "tag": "Flashback FM",
+  "info": {
+    "title": "Flashback FM",
+    "genre": "Anni '80",
+    "logo": "logo.png",
+    "dj": "DJ: Toni doppiato da Maria Chambers"
+  },
+  "fileGroups": [
+    {
+      "tag": "track",
+      "files": [
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        },
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        }        
+      ]
+    },
+    {
+      "tag": "general",
+      "files": [
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        },
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        },
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        }
+      ]
+    },
+    {
+      "tag": "mixin",
+      "files": [
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        },
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        },
+        {
+          "path": "Flashback FM.m4a",
+          "duration": 1125
+        }
+      ]
+    }
+  ],
+  "playlist": {
+    "firstFragment": {
+      "fragmentTag": "general"
+    },
+    "fragments": [
+      {
+        "tag": "general",
+        "src": {
+          "type": "group",
+          "groupTag": "general"
+        },
+        "nextFragment": [
+          {
+            "fragmentTag": "track"
+          }
+        ]
+      },
+      {
+        "tag": "track",
+        "src": {
+          "type": "group",
+          "groupTag": "track"
+        },
+        "nextFragment": [
+          {
+            "fragmentTag": "general",
+            "probability": 0.333
+          },
+          {
+            "fragmentTag": "track"
+          }
+        ],
+        "mixins": {
+          "pos": [
+            {
+              "tag": "begin",
+              "relativeOffset": 0.03
+            },
+            {
+              "tag": "end",
+              "relativeOffset": 0.97
+            }
+          ],
+          "mix": [
+            {
+              "tag": "mixins",
+              "src": {
+                "type": "group",
+                "groupTag": "mixin"
+              },
+              "condition": {
+                "type": "random",
+                "probability": 0.9
+              },
+              "posVariant": [
+                {
+                  "posTag": "end"
+                },
+                {
+                  "posTag": "begin"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

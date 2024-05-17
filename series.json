@@ -1,0 +1,38 @@
+{
+    "info": {
+        "title": "GTA III Radio",
+        "logo": "logo.png"
+    },
+    "common": {
+        "fileGroups": []
+    },
+    "stations": [
+        {
+            "path": "Chatterbox FM"
+        },
+		{
+            "path": "Double Cleff FM"
+        },
+		{
+            "path": "Flashback FM"
+        },
+		{
+            "path": "Game FM"
+        },
+		{
+            "path": "Head Radio"
+        },
+		{
+            "path": "K-Jah"
+        },
+		{
+            "path": "Lips 106"
+        },
+		{
+            "path": "MSX FM"
+        },
+		{
+            "path": "Rise FM"
+        }
+    ]
+}

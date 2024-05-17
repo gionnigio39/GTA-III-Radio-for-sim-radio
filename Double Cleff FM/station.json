@@ -1,0 +1,126 @@
+{
+  "tag": "Double Cleff FM",
+  "info": {
+    "title": "Double Cleff FM",
+    "genre": "Opera e lirica italiana",
+    "logo": "logo.png",
+    "dj": "DJ: Morgan Merryweather doppiato da Gerry Cosgrove"
+  },
+  "fileGroups": [
+    {
+      "tag": "track",
+      "files": [
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        },
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        }        
+      ]
+    },
+    {
+      "tag": "general",
+      "files": [
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        },
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        },
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        }
+      ]
+    },
+    {
+      "tag": "mixin",
+      "files": [
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        },
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        },
+        {
+          "path": "Double Cleff FM.m4a",
+          "duration": 1365
+        }
+      ]
+    }
+  ],
+  "playlist": {
+    "firstFragment": {
+      "fragmentTag": "general"
+    },
+    "fragments": [
+      {
+        "tag": "general",
+        "src": {
+          "type": "group",
+          "groupTag": "general"
+        },
+        "nextFragment": [
+          {
+            "fragmentTag": "track"
+          }
+        ]
+      },
+      {
+        "tag": "track",
+        "src": {
+          "type": "group",
+          "groupTag": "track"
+        },
+        "nextFragment": [
+          {
+            "fragmentTag": "general",
+            "probability": 0.333
+          },
+          {
+            "fragmentTag": "track"
+          }
+        ],
+        "mixins": {
+          "pos": [
+            {
+              "tag": "begin",
+              "relativeOffset": 0.03
+            },
+            {
+              "tag": "end",
+              "relativeOffset": 0.97
+            }
+          ],
+          "mix": [
+            {
+              "tag": "mixins",
+              "src": {
+                "type": "group",
+                "groupTag": "mixin"
+              },
+              "condition": {
+                "type": "random",
+                "probability": 0.9
+              },
+              "posVariant": [
+                {
+                  "posTag": "end"
+                },
+                {
+                  "posTag": "begin"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
